@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Predict - Nutrigaze</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      padding: 0;
+      margin: 0;
+    }
+    nav {
+      background: #000;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    .nav-links a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+    .upload-form {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    input[type="file"] {
+      margin: 20px 0;
+    }
+    button {
+      padding: 10px 20px;
+      background: #f72585;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="{{ url_for('index') }}" class="logo">Nutrigaze</a>
+    <div class="nav-links">
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('about') }}">About</a>
+      <a href="{{ url_for('predict') }}">Predict</a>
+      <a href="{{ url_for('contact') }}">Contact</a>
+    </div>
+  </nav>
+
+  <form class="upload-form" method="POST" enctype="multipart/form-data">
+    <h2>Upload an Image</h2>
+    <input type="file" name="image" accept="image/*" required>
+    <br>
+    <button type="submit">Predict</button>
+  </form>
+</body>
+</html>

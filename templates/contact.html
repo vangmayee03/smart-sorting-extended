@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Nutrigaze</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background: #000;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
+    }
+    .nav-links a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+    .contact-container {
+      padding: 60px;
+      text-align: center;
+    }
+    .contact-container h2 {
+      color: #f72585;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .contact-container p {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="{{ url_for('index') }}" class="logo">Nutrigaze</a>
+    <div class="nav-links">
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('about') }}">About</a>
+      <a href="{{ url_for('predict') }}">Predict</a>
+      <a href="{{ url_for('contact') }}">Contact</a>
+    </div>
+  </nav>
+
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <p>For queries or feedback, reach out at nutrigaze@example.com</p>
+  </div>
+</body>
+</html>

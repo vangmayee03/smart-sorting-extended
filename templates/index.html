@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nutrigaze - Home</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      box-sizing: border-box;
+    }
+
+    nav {
+      background: #000;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+
+    .hero {
+      height: 100vh;
+      background-image: url("{{ url_for('static', filename='images/fav.jpeg') }}");
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding-top: 180px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero .welcome-text {
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 10px;
+      color: #e0e0e0;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin: 10px 0;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .hero .description {
+      font-size: 16px;
+      max-width: 700px;
+      padding: 0 20px;
+      margin-top: 10px;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+
+    .hero-btn {
+      padding: 10px 24px;
+      font-size: 16px;
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .hero-btn:hover {
+      background: #fff;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="{{ url_for('index') }}" class="logo">Nutrigaze</a>
+    <div class="nav-links">
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('about') }}">About</a>
+      <a href="{{ url_for('predict') }}">Predict</a>
+      <a href="{{ url_for('contact') }}">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <p class="welcome-text">Welcome to <span>NutriGaze</span></p>
+    <h1>GREENGUARD INSIGHTS</h1>
+    <p class="description">
+      We are a team of innovative scientists and technologists dedicated to ensuring your produce is always fresh and healthy.
+    </p>
+    <a href="{{ url_for('predict') }}" class="hero-btn">GET STARTED</a>
+  </div>
+</body>
+</html>
