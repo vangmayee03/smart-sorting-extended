@@ -2,6 +2,7 @@ services:
   - type: web
     name: smart-sorting-extended
     env: python
+    plan: free
+    runtime: python-3.10.13
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
-    runtime: python-3.10.13
